@@ -36,7 +36,7 @@ The project was designed to strengthen understanding of Java, object-oriented pr
 
 ---
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 - Java
 - Java Swing
@@ -120,7 +120,7 @@ for command-line mode.
 
 ---
 
-# ⌨️ CLI Commands
+# CLI Commands
 
 Move pieces using chess coordinates:
 
