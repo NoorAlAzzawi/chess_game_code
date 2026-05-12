@@ -1,76 +1,44 @@
-# Java Chess Engine
+# Java Chess Game
 
-A full-featured Java Chess project built with object-oriented design principles, Maven, and automated JUnit testing.  
-The project supports both CLI and GUI gameplay, legal move validation, check/checkmate detection, and comprehensive rule testing.
+A fully playable chess game built in Java using object-oriented programming principles.  
+This project includes both a command-line mode and a Java Swing graphical interface.
 
 ---
 
-# Overview
+## Overview
 
-This project is a custom-built chess engine developed in Java.  
-It was designed to simulate real chess gameplay while focusing on clean architecture, modular design, and automated testing.
+This project simulates a real chess game with:
 
-The application includes:
-
-- Command Line Interface (CLI)
-- Graphical User Interface (GUI)
 - Legal move validation
-- Check, checkmate, and stalemate detection
-- Unit and integration tests
-- Maven project structure
+- Turn-based gameplay
+- Capturing pieces
+- Check detection
+- Checkmate handling
+- GUI and CLI support
 
-The goal of the project was to create a maintainable and expandable chess system using professional software engineering practices.
+The project was designed to strengthen understanding of Java, object-oriented programming, and game development concepts.
 
 ---
 
 # Features
 
-## Core Chess Features
-
-- Full chess board implementation
-- Piece movement validation
-- Turn-based gameplay
-- Capturing system
-- Check detection
-- Checkmate detection
-- Stalemate detection
-- Illegal move prevention
-- Safe move simulation
-
----
-
-## Interfaces
-
-### CLI Mode
-
-- Play chess directly in the terminal
-- Coordinate-based move input
-- Board rendering in text format
-
-### GUI Mode
-
-- Visual chess board interface
-- Interactive gameplay
-- Java Swing-based rendering
+✔️ Full 8x8 chess board  
+✔️ Object-oriented piece system  
+✔️ Legal move validation  
+✔️ Turn-based gameplay  
+✔️ Piece capturing  
+✔️ Check detection  
+✔️ Checkmate detection  
+✔️ Command-line gameplay  
+✔️ Java Swing graphical interface  
+✔️ Unicode chess pieces in GUI mode  
+✔️ Forfeit option in terminal mode  
 
 ---
 
-## Testing
-
-- Automated JUnit tests
-- Rule validation tests
-- Checkmate and stalemate tests
-- Piece movement tests
-- Fool’s Mate verification
-- Chess utility testing
-
----
-
-# Technologies Used
+# 🛠️ Tech Stack
 
 - Java
-- Maven
-- JUnit 5
 - Java Swing
 - Object-Oriented Programming (OOP)
 - Git & GitHub
@@ -80,113 +48,181 @@ The goal of the project was to create a maintainable and expandable chess system
 # Project Structure
 
 ```text
-src/
- ├── main/
- │    └── java/
- │         └── oopchesscode/
- │              ├── board/
- │              ├── game/
- │              ├── pieces/
- │              ├── player/
- │              ├── position/
- │              └── utils/
- │
- └── test/
-      └── java/
-           └── oopchesscode/
-
-
-
-
-How to Run
-Run the Application
-From the project root directory:
-./mvnw exec:java -Dexec.mainClass="oopchesscode.game.ChessApp"
-
-
-The application will ask whether to start in GUI mode or CLI mode.
-
-How to Run Tests
-Run all unit tests:
-./mvnw test
-
-Current test status:
-Tests run: 63
-Failures: 0
-Errors: 0
-BUILD SUCCESS
-
-# Screenshots
-
-## GUI Gameplay
-
-![GUI](screenshots/cli.jpg)
-
-## CLI Gameplay
-
-![CLI](screenshots/cli.jpg)
-
-
-
-
-
-Architecture
-The project follows an object-oriented architecture with separation of concerns.
-Main Components
-Board Layer
-Handles:
-Board state
-Piece placement
-Square tracking
-Piece Layer
-Each chess piece contains:
-Movement rules
-Legal move generation
-Piece-specific behavior
-Game Layer
-Controls:
-Turn management
-Game flow
-Win/loss conditions
-Check/checkmate logic
-Test Layer
-Contains:
-Rule verification
-Integration testing
-Regression testing
-
-Known Limitations
-The current version does not yet include:
-Castling
-En passant
-Pawn promotion GUI selection
-Move history
-Undo functionality
-AI opponent
-These features are planned for future development.
-
-Future Improvements
-Planned enhancements include:
-Castling support
-En passant support
-Pawn promotion interface
-Move history tracking
-Undo/redo system
-AI opponent
-Improved GUI graphics
-Sound effects
-Online multiplayer support
-
-Learning Outcomes
-This project strengthened experience with:
-Object-oriented programming
-Software architecture
-Java application development
-Automated testing
-Maven project management
-Debugging and validation
-Git workflow
-
-Author
-Noor AlAzzawi
+oopchesscode/
+├── board/
+│   └── ChessBoard.java
+├── game/
+│   └── ChessApp.java
+├── pieces/
+│   ├── BasePiece.java
+│   ├── BishopPiece.java
+│   ├── KingPiece.java
+│   ├── KnightPiece.java
+│   ├── PawnPiece.java
+│   ├── QueenPiece.java
+│   └── RookPiece.java
+├── player/
+├── position/
+└── utils/
 ```
+
+---
+
+# How to Run
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/NoorAlAzzawi/chess_game_code.git
+```
+
+## 2. Navigate Into the Project
+
+```bash
+cd chess_game_code
+```
+
+## 3. Compile the Java Files
+
+```bash
+javac oopchesscode/**/*.java
+```
+
+## 4. Run the Application
+
+```bash
+java oopchesscode.game.ChessApp
+```
+
+---
+
+# Gameplay
+
+When the game starts, you will see:
+
+```text
+Start game in GUI mode? (y/n):
+```
+
+Type:
+
+```text
+y
+```
+
+for the graphical interface, or:
+
+```text
+n
+```
+
+for command-line mode.
+
+---
+
+# ⌨️ CLI Commands
+
+Move pieces using chess coordinates:
+
+```text
+e2 e4
+```
+
+To forfeit the game:
+
+```text
+f
+```
+
+---
+
+# Main Components
+
+## ♜ Board Layer
+
+Handles:
+
+- Board state
+- Piece placement
+- Piece movement
+- Captures
+- Threat detection
+
+---
+
+## Piece Layer
+
+Each chess piece has its own class and movement logic.
+
+Examples:
+
+- Pawn
+- Rook
+- Knight
+- Bishop
+- Queen
+- King
+
+---
+
+## Game Layer
+
+Controls:
+
+- Turn management
+- Check detection
+- Checkmate logic
+- Game flow
+- CLI / GUI switching
+
+---
+
+## GUI Layer
+
+Built using Java Swing.
+
+Features:
+
+- Interactive chess board
+- Unicode chess symbols
+- Clickable interface
+- Visual board updates
+
+---
+
+# What I Learned
+
+This project improved my skills in:
+
+- Java programming
+- Object-oriented design
+- Game logic implementation
+- Java Swing GUI development
+- Debugging
+- Code organization
+- Git & GitHub workflows
+
+---
+
+# Future Improvements
+
+- Add castling
+- Add en passant
+- Add pawn promotion
+- Add move history
+- Add undo/redo support
+- Improve GUI styling
+- Add AI opponent
+- Add multiplayer support
+- Add unit testing
+
+---
+
+# Author
+
+### Noor AlAzzawi
+
+Computer Science Student at Texas State University
+
+GitHub:  
+https://github.com/NoorAlAzzawi
