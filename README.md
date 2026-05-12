@@ -120,7 +120,7 @@ BUILD SUCCESS
 
 ## GUI Gameplay
 
-![GUI](screenshots/gui.jpg)
+![GUI](screenshots/cli.jpg)
 
 ## CLI Gameplay
 
