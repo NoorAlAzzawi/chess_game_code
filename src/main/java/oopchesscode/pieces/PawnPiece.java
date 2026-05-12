@@ -21,8 +21,9 @@ public class PawnPiece extends BasePiece {
         final int tr = target.getRankIndex(), tf = target.getFileIndex();
         final int dr = tr - sr, df = tf - sf;
 
-        final int dir = isWhite ? -1 : 1;
-        final int startRank = isWhite ? 6 : 1;
+        // White advances toward rank 8 (increasing index); Black toward rank 1 (decreasing).
+        final int dir = isWhite ? 1 : -1;
+        final int startRank = isWhite ? 1 : 6;
 
         if (dr == 0 && df == 0) return false;
         if (df == 0 && dr == dir && board.isEmpty(target)) return true;
@@ -45,8 +46,9 @@ public class PawnPiece extends BasePiece {
         final List<Square> moves = new ArrayList<>(4);
         final int r0 = square.getRankIndex();
         final int f0 = square.getFileIndex();
-        final int dir = isWhite ? -1 : 1;
-        final int startRank = isWhite ? 6 : 1;
+        // White advances toward rank 8 (increasing index); Black toward rank 1 (decreasing).
+        final int dir = isWhite ? 1 : -1;
+        final int startRank = isWhite ? 1 : 6;
 
         final Square oneAhead = new Square(r0 + dir, f0);
         if (board.onBoard(oneAhead) && board.isEmpty(oneAhead)) {
@@ -75,6 +77,6 @@ public class PawnPiece extends BasePiece {
 
     @Override
     public String toString() {
-        return isWhite ? "P" : "p";
+        return isWhite ? "p" : "P";
     }
 }

@@ -63,7 +63,7 @@ public class RookPiece extends BasePiece {
 
     @Override
     public String toString() {
-        return isWhite ? "R" : "r";
+        return isWhite ? "r" : "R";
     }
 }
 

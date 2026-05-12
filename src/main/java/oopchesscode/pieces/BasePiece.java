@@ -36,7 +36,3 @@ public abstract class BasePiece {
 }
 
 
-
-
-
-
