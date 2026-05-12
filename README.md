@@ -222,7 +222,5 @@ This project improved my skills in:
 
 ### Noor AlAzzawi
 
-Computer Science Student at Texas State University
-
 GitHub:  
 https://github.com/NoorAlAzzawi
