@@ -138,7 +138,7 @@ f
 
 # Main Components
 
-## ♜ Board Layer
+## Board Layer
 
 Handles:
 
